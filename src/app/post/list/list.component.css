@@ -1,0 +1,15 @@
+.errorMessage{
+    color:red;
+    font-size: 15px;
+}
+.form-input{
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px rgba(220, 226, 247, 0.53);
+    background-color: #fff;
+    width: 300px;
+    border-radius: 5px;
+}
+.form-label{
+    font-size: 20px;
+    font-weight: 600;
+}

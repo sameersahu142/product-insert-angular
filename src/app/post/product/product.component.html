@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="table-header">
+        Product List
+    </div>
+    <div class="box-item">
+        <div *ngFor="let product of products" class="table-data">
+            <div class="product-name"> {{ product.name }} </div>
+            <div>
+                <button class="button" type="button" [routerLink]="['/product', product.name ]"
+                [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" >Add {{ product.name }}
+            </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

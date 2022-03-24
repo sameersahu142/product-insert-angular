@@ -1,0 +1,12 @@
+<div [formGroup]="myForm">
+    <div class="form-label">
+        <label>{{ item.caption}}</label>
+    </div>
+    <div>
+        <input class="form-input" [formControlName]="item.caption" 
+                [type]="item.type" [value]="item.defaultValue" >
+    </div>
+    <div class="errorMessage" *ngIf="isValid">
+        {{ item.validationMessage}}
+    </div>
+</div>

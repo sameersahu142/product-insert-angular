@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="header">
+        {{ itemName }}
+    </div>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div *ngFor="let item of items" class="items-data">
+        <app-list [item]="item" [myForm]="myForm"></app-list>
+        <!-- <label  class="form-label">{{ item.caption}}</label>
+        <br>
+        <input class="form-input"
+            [type]="item.type"
+            [value]="item.defaultValue"
+            [formControlName]="item.caption" 
+            [required]="item.mandatory" /> -->
+            <!-- <div 
+                class="alert alert-danger">
+
+            <div *ngIf="myForm.controls[item.caption].value">
+                {{ item.validationMessage }}
+            </div>
+            </div> -->
+            <!-- {{ myForm.controls[item.caption].dirty}} -->
+    </div>
+    <button type="submit" class="form-submit" >Submit</button>
+    </form>
+</div>
